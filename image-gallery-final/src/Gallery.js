@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import'./gallery.css';
+import CloseIcon from '@mui/icons-material/Close';
 import Img1 from './img/img1.jpg'
 import Img2 from './img/img2.jpg'
 import Img3 from './img/img3.jpg'
@@ -108,6 +109,7 @@ return(
 <>
 <div className={model? "model open": "model"}>
  <img src={tempimgSrc} />
+ <CloseIcon onClick={() => setModel(false)}/>
 </div>
 <div className='gallery'>
 {data.map((item,index)=>{
